@@ -1,0 +1,8 @@
+<h3>  {{valor}}  - <small>{{contador}}</small></h3>
+<div id="user-cards" class="cards-container">
+    <img class="gcard" src="assets/img/cards/grey_back.png" alt="card">
+
+    <img class="gcard"   *ngFor="let c of cartas" src="assets/img/cards/{{ c.key}}.png" alt="card">
+
+   
+</div>

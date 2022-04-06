@@ -1,0 +1,37 @@
+
+
+
+
+<main>
+    <div class="toolbar">
+        <button type="button" class="btn btn-primary" (click)="onReluadCardClick($event)" >New Game</button>
+        <button  type="button" class="btn btn-secondary" (click)="onGetCardClick($event)" [disabled]="esTurnoCpu">Get card</button>
+        <button  type="button" class="btn btn-danger" (click)="onStopClick()" [disabled]="esJuegoTerminado" >Stop</button>
+
+    </div>
+
+    <div class="container cards-board">
+        <div >
+            <app-player 
+            [valor]="valor"
+             [cartas]="cartaUsuario"
+             [contador]="contadorPlayer"
+             >
+          
+        
+        </app-player>
+        </div>
+
+        <div >
+            
+            <app-player 
+                [valor]="'COMPIUTER'"
+                [cartas]="cartaCpu"
+                [contador]="contadorCpu" >
+
+
+
+            </app-player>
+        </div>
+    </div>
+</main>
